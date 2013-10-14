@@ -1,4 +1,4 @@
-<h6>Finger Putty</h3>
+<h5>Finger Putty</h3>
 
 Finger Putty is an OS fingerprint spoofer that modifies the TCP/IP stack to alter outgoing packets and defeat Nmap fingerprinting.
 Launching the program using the start.sh file will also give your computer a temporary MAC address and launch Chrome with a user agent matching your Nmap fingerprint.
