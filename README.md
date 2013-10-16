@@ -8,7 +8,11 @@ Development still in progress - use at your own risk.
 For use on OSX 10.8
 
 Planned features:
+
   Additional profiles (Windows 8, Playstation/Xbox, Android)
 
 Known issues:
+
   Spoofed user agent OS and Nmap fingerprint OS don't dynamically match
+  
+  Nmap fingerprinting often results in an error (no OS found) rather than profile OS
