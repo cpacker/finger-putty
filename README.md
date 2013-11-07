@@ -6,7 +6,7 @@ Launching the program using the start.sh file will also give your computer a tem
 
 *Development still in progress - use at your own risk.*
 
-**For use on OSX 10.8**
+**For use on OSX 10.8.x*
 
 Planned features:
 * Additional profiles (Windows 8, Playstation/Xbox, Android)
