@@ -46,13 +46,8 @@ def defaults():
         print "Error setting sysctl"
 
 def control(x):
-    os = {
-            'Ubuntu':1,
-            #'Windows':2,
-            #'Playstation':3,
-    }.get(x,1)
     # Ubuntu
-    if os == 1:
+    if os == "Ubuntu":
         mtu = 1500
         ttl = 64
         tcpr = 131072
@@ -82,19 +77,3 @@ def control(x):
         stamp(stamp)
     except Exception, e:
         print "Error setting sysctl"
-
-def main():
-    valid = 0
-    do{
-        os = raw_input("Please enter an OS to mask\n Available options are: \nUbuntu\nDefault\n")
-        if(os != "Ubuntu" and os != "Default"):
-            print "OS not recognized. Valid options are: \nUbuntu\nDefault\n"
-        elif(os == "Default"):
-            valid = 1
-            defaults()
-        else:
-            valid = 1
-            control(os)
-    }while valid == 0
-
-main()

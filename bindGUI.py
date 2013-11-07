@@ -40,9 +40,13 @@ class Example(Frame):
             command=self.quit)
         changePrintButton.place(x=50, y=80)
 
+        def callback():
+            if variable.get() != "Choose your OS":
+                setctl.control(variable.get())
+
         # Launch browser button
         launchButton = Button(self, text="Launch browser (new user-agent)",
-            command=setctl.test)
+            command=callback)
         launchButton.place(x=50, y=110)
 
 
