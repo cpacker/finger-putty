@@ -10,7 +10,7 @@ Launching the program using the start.sh file will also give your computer a tem
 
 Planned features:
 * Additional profiles (Windows 8, Playstation/Xbox, Android)
-* Implement GUI using pyobjc / wrap as OSX app
+* Implement GUI using Tkinter / wrap as OSX app
 
 Known issues:
 * Spoofed user agent OS and Nmap fingerprint OS don't dynamically match
