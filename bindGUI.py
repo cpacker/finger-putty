@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import setctl
+import useragent
 
 from Tkinter import Tk, BOTH, StringVar
 from ttk import Frame, Button, Style, OptionMenu
@@ -31,22 +32,28 @@ class Example(Frame):
         variable = StringVar(self)
         variable.set("Linux")
 
-        osDropdownButton = OptionMenu(self, variable, "Choose your OS", "Linux", "Windows", "Playstation")
+        osDropdownButton = OptionMenu(self, variable, "Choose your OS", "Linux", "Windows", "Playstation", "Revert Defaults")
         osDropdownButton.pack()
         osDropdownButton.place(x=50, y=50)
 
         # Set (OS) fingerprint button
-        changePrintButton = Button(self, text="Set fingerprint",
-            command=self.quit)
-        changePrintButton.place(x=50, y=80)
-
-        def callback():
-            if variable.get() != "Choose your OS":
+        def fcallback():
+            if variable.get() == "Revert Defaults":
+                setctl.defaults()
+            elif variable.get() != "Choose your OS":
                 setctl.control(variable.get())
 
+        changePrintButton = Button(self, text="Set fingerprint",
+            command=fcallback)
+        changePrintButton.place(x=50, y=80)
+
         # Launch browser button
+        def bcallback():
+            useragent.getVersion()
+            useragent.launchBrowser()
+
         launchButton = Button(self, text="Launch browser (new user-agent)",
-            command=callback)
+            command=bcallback)
         launchButton.place(x=50, y=110)
 
 
@@ -54,7 +61,7 @@ class Example(Frame):
 def main():
   
     root = Tk()
-    root.geometry("250x150+300+300")
+    root.geometry("350x150+300+300")
     app = Example(root)
     root.mainloop()  
 
