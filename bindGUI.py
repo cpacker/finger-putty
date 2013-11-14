@@ -8,7 +8,7 @@ from Tkinter import Tk, BOTH, StringVar
 from ttk import Frame, Button, Style, OptionMenu
 
 
-class Example(Frame):
+class mGUI(Frame):
   
     def __init__(self, parent):
         Frame.__init__(self, parent)   
@@ -32,7 +32,11 @@ class Example(Frame):
         variable = StringVar(self)
         variable.set("Linux")
 
-        osDropdownButton = OptionMenu(self, variable, "Choose your OS", "Linux", "Windows", "Playstation", "Revert Defaults")
+        osDropdownButton = OptionMenu(self, variable, "Choose your OS", 
+                                                      "Linux", 
+                                                      "Windows", 
+                                                      "Playstation", 
+                                                      "Revert Defaults")
         osDropdownButton.pack()
         osDropdownButton.place(x=50, y=50)
 
@@ -62,7 +66,7 @@ def main():
   
     root = Tk()
     root.geometry("350x150+300+300")
-    app = Example(root)
+    app = mGUI(root)
     root.mainloop()  
 
 
