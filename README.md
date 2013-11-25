@@ -8,7 +8,7 @@ To open the application run <code>python bindGUI.py</code> from the appropriate 
 
 ***Development still in progress - use at your own risk.***
 
-**For use on OSX 10.8.x**
+**For use on OSX 10.8.x+**
 
 *Planned features:*
 * Additional profiles (Windows 8, Playstation/Xbox, Android)
